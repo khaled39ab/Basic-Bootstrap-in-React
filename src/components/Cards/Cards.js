@@ -1,4 +1,6 @@
 import React from 'react';
+import { CardGroup } from 'react-bootstrap';
+import Card from '../Card/CardP';
 
 const Cards = () => {
     const persons = [
@@ -42,9 +44,14 @@ const Cards = () => {
     return (
         <div>
             <h3>Famous persons</h3>
-            {
-                persons.map(person => )
-            }
+            <CardGroup>
+                {
+                    persons.map(person => <Card
+                        key={person.id}
+                        person={person}
+                    ></Card>)
+                }
+            </CardGroup>
         </div>
     );
 };
